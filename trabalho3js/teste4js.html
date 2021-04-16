@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MonteArte</title>
+    <link rel="stylesheet" href="estilotrab2.css" type="text/css">
+    <style>
+        img {
+            width: 200px;
+        }
+        
+        p {
+            background-color: darkseagreen;
+        }
+    </style>
+    <script>
+        var linha1 = document.getElementById('linha1');
+        var linha2 = document.getElementById('linha2');
+        var linha3 = document.getElementById('linha3');
+        var estiloDeLinha
+
+        function trocarImg1() {
+            document.getElementById("linha1").src = "img/selecionado1.png";
+            estiloDeLinha = "linha1"
+                //altero a imagem quando for clicada esse estilo de linha é para quando no futuro eu for armazer essas informações do site
+
+        }
+
+        function trocarImg2() {
+            document.getElementById("linha2").src = "img/selecionado2.jpg";
+            estiloDeLinha = "linha2"
+                //altero a imagem quando for clicada esse estilo de linha é para quando no futuro eu for armazer essas informações do site
+        }
+
+        function trocarImg3() {
+            document.getElementById("linha3").src = "img/selecionado3.jpg";
+            estiloDeLinha = "linha3"
+                //altero a imagem quando for clicada esse estilo de linha é para quando no futuro eu for armazer essas informações do site
+        }
+
+        function apagarSeleciondo() {
+            document.getElementById("linha1").src = "img/linha1.jpg";
+            document.getElementById("linha2").src = "img/linha2.jpg";
+            document.getElementById("linha3").src = "img/linha3.jpg";
+            //Redefino todas as selecionadas para como era antes
+        }
+
+        function enviar() {
+            alert("informações enviadas com sucesso. Para mais informações entre em contato via instagram")
+                //informo que as informoções foram "enviadas" quando o botão de enviar é apertado
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="menu">
+
+        <div id="corpoMenu">
+            <h1> monteArte</h1>
+            <h2>Monte comigo sua própria arte!</h2>
+
+            <div id="menuNav">
+                <ul>
+                    <li><a href="teste1.html">apresentação</a></li>
+                    <li><a href="teste2.html">Bordados</a></li>
+                    <li><a href="teste3.html">Minhas artes</a></li>
+                    <li><a href="loja.html">Pedir</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div id="corpoCompra">
+        <div>
+
+
+            <h1>Quadros estilizados</h1>
+            <h2 id="obs">O valor será informado de acordo com suas escolhas via contato por email ou whats</h2>
+            <h2>Qual o tamanho que você deseja?</h2>
+            <table id="imagens">
+                <tr>
+                    <td>
+                        <h3>20x20</h3>
+                        <input type="radio" name="tamanho" value="20x20" />
+                    </td>
+                    <td>
+                        <h3>25x20</h3>
+                        <input type="radio" name="tamanho" value="25x20 " />
+                    </td>
+                    <td>
+                        <h3>30x30</h3>
+                        <input type="radio" name="tamanho" value="30x30 " />
+                    </td>
+                </tr>
+            </table>
+
+
+
+
+            <h2>Quais cores você deseja?</h2>
+            <h2 id="obs">De acordo com a quantia de cores o valor pode alterar</h2>
+            </br>
+            <input type="checkbox" name="azul " value="azul " />azul
+            <input type="checkbox" name="verde " value="verde " />verde
+            <input type="checkbox" name="amarelo " value="amarelo " />amarelo
+            <input type="checkbox" name="rosa " value="rosa " />rosa
+            <input type="checkbox" name="rosa claro " value="rosa claro " />rosa claro
+            <input type="checkbox" name="laranja " value="laranja " />laranja
+            <input type="checkbox" name="outra " value="outra " />outra
+
+            <h2>Outra cor</h2>
+            <input type="text " id="descricaoCor ">
+
+            <h2>Qual imagem você deseja para o fundo da tela?</h2>
+            <input type="file" name="arquivo" />
+
+            <h2>Selecione uma imagem do estilo específico que você quer: </h2>
+            <h3>obs: a cor da linha pode ser mudada em três estilos:</h3>
+
+            <table id="tabelaDeSelecionados">
+                <tr>
+                    <td>
+                        <img id="linha1" src="img/linha1.jpg " onclick="trocarImg1()">
+                        <p>fundo com metade pintado</p>
+                    </td>
+                    <td>
+                        <img id="linha2" src="img/linha2.jpg " alt=" " onclick="trocarImg2()">
+                        <p>uma unica cor para fundo e linha</p>
+                    </td>
+                    <td>
+                        <img id="linha3" src="img/linha3.jpg " alt=" " onclick="trocarImg3()">
+                        <p>fundo unico e cores de linha diferentes</p>
+                    </td>
+
+                </tr>
+            </table>
+            <input type="reset" name="apagar o selecionado" id="" onclick="apagarSeleciondo()">
+
+            <h2>Qual a cor que você deseja na linha?</h2>
+            <input type="checkbox" name="azul " value="azul " />azul
+            <input type="checkbox" name="verde " value="verde " />verde
+            <input type="checkbox" name="amarelo " value="amarelo " />amarelo
+            <input type="checkbox" name="rosa " value="rosa " />rosa
+            <input type="checkbox" name="rosa claro " value="rosa claro " />rosa claro
+            <input type="checkbox" name="laranja " value="laranja " />laranja
+            <input type="checkbox" name="outra " value="outra " />outra
+
+            <h2>Mais descrições sobre como você deseja o seu quadro</h2>
+            <textarea name="TxtArea " id=" " cols="100 " rows="15 "></textarea>
+            </br>
+            <input type="submit" value="enviar" id="submit" onclick="enviar()">
+
+        </div>
+
+    </div>
+</body>
+
+</html>

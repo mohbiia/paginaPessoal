@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    /*sem bordas*/
+    padding: 0;
+    /*define uma a distância entre o conteúdo de um elemento e suas bordas.*/
+    font: 10px arial, sans-serif;
+    background: url(img/parede-de-tijolos-pintados.jpg);
+    /*adicionei uma imagem como fundo para todos os sites*/
+}
+
+#menu {
+    /*o menu eu fiz em um div e ele aparece em todas as paginas*/
+    background: url(img/capamontearte.png);
+    /*adcionei uma imagem no meu menu*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 200px;
+    /*comprimento*/
+    width: 100%;
+    /*largura*/
+    text-align: center;
+    /*alinhamento do conteudo do div*/
+}
+
+#menu h1 {
+    font-size: 50px;
+    color: blanchedalmond;
+    /*mudei o tamanho da fonte h1 apenas os que estão dentro do div menu e cor, respectivamente*/
+}
+
+#menu h2 {
+    font-size: 25px;
+    color: cornsilk;
+    /*mesmo processo do menu h1, mas mudando apenas o h2 que estão dentro do div menu*/
+}
+
+#menuNav {
+    background: rgb(108, 128, 89);
+}
+
+#menuNav ul {
+    margin: 0 0 0 20px;
+    padding: 0;
+    list-style-type: none;
+    /*alterei o estilo da lista*/
+}
+
+#menuNav li {
+    display: inline;
+    /*coloca todos os itens na mesma linha*/
+    padding: 0 30px;
+    border-right: 1px solid rgb(5, 5, 5);
+    /*adcionei bordas para separar cada infomação dentro do menu*/
+}
+
+#menuNav li a {
+    text-decoration: none;
+    /*não ficará soblinhado*/
+    color: rgb(3, 3, 3);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*mudando a fonte*/
+    font-size: 20px;
+}
+
+#menuNav a:hover {
+    /*reponsavel por alterar a cor quando o mouse passar por cima*/
+    background-color: chocolate;
+}
+
+#corpoLateral {
+    background-color: rgb(104, 216, 110);
+    float: right;
+    width: 200px;
+    position: relative;
+    /*alterei a posição dele com relação a posição normal*/
+    top: 60px;
+    /*distantancia do topo(parte de cima)*/
+}
+
+#contato {
+    background-color: rgb(206, 202, 206);
+    float: right;
+    width: 200px;
+    position: relative;
+    top: 60px;
+    /*funncionamento aqui é semelhante ao #corpolateral*/
+}
+
+#meio {
+    text-align: left;
+    /*alinhamento está para a esquerda*/
+    margin: 50px;
+    padding: 20px 0;
+}
+
+#meio h1 {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+
+#meio p,
+li {
+    font-size: 25px;
+}
+
+#imgdireita {
+    float: right;
+    /*permite deslizar o fluxo normal e desloca-lo para a direita*/
+}
+
+#center {
+    text-align: center;
+    /*alinhado todos os conteudos que estiverem em divs com o id center*/
+}
+
+#meio h2 {
+    font-size: 26px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*alterando os valores das caracteristicas do h2 apenas dentro da div meio*/
+}
+
+#meio table {
+    text-align: center;
+}
+
+#contato p,
+h1 {
+    font-size: 25px;
+    margin: 8px;
+}
+
+
+/*loja*/
+
+.container {
+    width: 100%;
+    height: 80vh;
+    /* definido o tamanho do meu container*/
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*configurações para que ele permaneça no centro da tela ocupando todo o espaço*/
+}
+
+#forml {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*altero o comportamento para que todo elemento dentro do formulario fique em coluna*/
+}
+
+#forml h3 {
+    font-size: 1.5rem;
+}
+
+.card {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    /*tamanho que defino o card*/
+}
+
+.photo {
+    background: url(img/foto2.jpg) no-repeat center;
+    background-attachment: inherit;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    /*adiciono uma imagem no card que ocupe 40% do espaço caracterizada verticalmente*/
+}
+
+.card form {
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*ao lado da imagem, peço que o navegador faça com que os dados do formulario estejam centralizados ocupando os 60% restantes do card*/
+}
+
+.medida {
+    width: 300px;
+    /*medida padão para todo elemento dentro do card*/
+}
+
+.nome-sobrenome,
+.contato {
+    display: flex;
+    gap: 8px;
+    /*dou um gap(espaçamento) para os elementos que fazem parte da div contato*/
+}
+
+.nome-sobrenome input,
+.contato input {
+    width: 144px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #664AFF;
+    /*defino que ambos os inputs declarados acima ocuparão 144px(levo em consideração os 300px do tamanho padrão para as linhas do formulario)*/
+}
+
+.card select {
+    border: none;
+    border-bottom: 2px solid #664AFF;
+    /*configurações e caracteristicas gerais do meu formulario*/
+}
+
+.control input {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    float: right;
+    background-color: #664AFF;
+    /*caracteristicas gerais do meu button, que irá flutuar do lado direito do form e retiro algumas configs padroes para deixar o btn mais moderno*/
+}
+
+.disabled input {
+    outline: none;
+    border: none;
+    cursor: not-allowed;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    float: right;
+    background-color: #664AFF;
+    opacity: .5;
+    /*essa classe foi criada para atuar com o javascript e dar um efeito de desativado ao botão.*/
+}
+
+
+/*range*/
+
+.range {
+    height: 80px;
+    width: 200px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 65px 0 45px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    /*caracteristicas gerais do input range para adaptar à minha página*/
+}
+
+.sliderValue {
+    position: relative;
+    width: 100%;
+}
+
+.sliderValue span {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    transform: scale(0);
+    font-weight: 500;
+    top: 10px;
+    left: 210px;
+    line-height: 55px;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    /*Começo a preparar as caracteristicas do sliderValue que atuará ao deslize do range*/
+    /*dentre essas caracteristicas, destaco o tamanho e o posicionamento na tela que se da graças postition definido como absolute*/
+}
+
+.sliderValue span.show {
+    transform: translateX(168%) scale(1);
+    /*classe que atuará junto com o java script*/
+}
+
+.sliderValue span:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #664AFF;
+    border: 3px solid #fff;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    /*aqui eu complemento o sliderValue com um novo formato adaptado e demais configurações*/
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    /*o field é o campo responsavel pela rolagem do input range e eu o defino como centralizado*/
+}
+
+.field .value {
+    position: absolute;
+    font-size: 18px;
+    color: #664AFF;
+    font-weight: 600;
+    /*values são os campos responsaveis pela descrição de elementos dentro do range e aqui, em especial, eu mudo a espessura da fonte e defino como um position absolute para poder posiciona-los onde quero*/
+}
+
+.field .value.left {
+    left: -22px;
+    /*posicionamento como mencionei acima*/
+}
+
+.field .value.right {
+    right: -43px;
+    /*posicionamento como mencionei linhas acima*/
+}
+
+.range input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    z-index: 2222;
+    /*E a partir daqui para as linhas abaixo são só mais caracteristicas gerais do input range. Nada em especial: tamanhos, desativar elementos padrões para dar um toque de modernidade, cores e bordar redondas, cursor para o dedinho. Somente*/
+}
+
+.range input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    background: #664AFF;
+    border: 1px solid #664AFF;
+    cursor: pointer;
+}
+
+.range input::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    background: #664AFF;
+    border: 1px solid #664AFF;
+    cursor: pointer;
+}
+
+.range input::-moz-range-progress {
+    background: #664AFF;
+}
+
+#corpoCompra {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*alinhar os elementos do corpo compra ao centro da pagina*/
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    /*definir tamanho fonte e color da fonte*/
+}
+
+#obs {
+    background-color: rgb(233, 245, 210);
+    width: 50%;
+    display: inline;
+    /*coloca todos os itens na mesma linha*/
+    padding: 0 30px;
+    font-size: 12px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*alinha os itens p ao centro*/
+}
