@@ -1,19 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilotrab2.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="jquery.mask.min.js"></script>
-    <script>
-        $(document).ready(() => {
-            $("#numero").mask("(00) 0 0000-0000");
-        });
-    </script>
-    <title>Faça seu pedido</title>
+    <title>MonteArte</title>
+    <link rel="stylesheet" href="estilotrab2.css" type="text/css">
+    <!--link que pemite a alteração do css nesse cod-->
 </head>
 
 <body>
@@ -27,91 +19,48 @@
                     <li><a href="teste1.html">apresentação</a></li>
                     <li><a href="teste2.html">Bordados</a></li>
                     <li><a href="teste3.html">Minhas artes</a></li>
-                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="loja.html">Pedir</a></li>
                 </ul>
             </div>
 
-            <div id="meio">
-                <p>
-                    Faça seu pedido preenchendo as informações abaixo!
-                </p>
-                <div class="container">
-                    <div class="center">
-                        <div class="card">
-                            <div class="photo">
-
-                            </div>
-                            <form action="teste4js.html" method="post" id="forml">
-                                <h3>Monte sua arte comigo!</h3>
-                                <div class="nome-sobrenome medida">
-                                    <input type="text" name="nome" id="nome" placeholder="nome*"> <input type="text" name="sobrenome" id="sobrenome" placeholder="sobrenome*">
-                                </div>
-                                <select class="medida" name="municipio" id="municipio">
-                                    <option value="---">-----</option>
-                                    <option value="jc"> João Câmara</option>
-                                    <option value="touros">Touros</option>
-                                    <option value="smg">São Miguel do Gostoso</option>
-                                    <option value="janda">Jandaíra</option>
-                                    <option value="pz">Parazinho</option>
-                                    <option value="sb">São Bento</option>
-                                    <option value="natal">Natal</option>
-                                </select>
-                                <div class="quantidade medida">
-                                    <p style="font-size: 1.2rem; text-align: center;">
-                                        unidades
-                                    </p>
-                                    <div class="range">
-                                        <div class="sliderValue">
-                                            <span class="spon ">3</span>
-                                        </div>
-                                        <div class="field">
-                                            <div class="value left">
-                                                1</div>
-                                            <input class="slide" type="range" min="1" max="5" value="3" steps="1">
-                                            <div class="value right">
-                                                5</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contato medida">
-                                    <input type="text" name="numero" id="numero" placeholder="número com DDD*" onmouseout="checar()">
-                                    <input type="email" name="email" id="email" placeholder="E-mail">
-                                </div>
-                                <div class="control medida disabled">
-                                    <input type="submit" value="Próximo" id="btn" disabled>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <!--<div id="corpo">
+            <div id="corpoLateral">
+                <h4>Para mais sites como esses acesse:</h4>
+                <ul>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li> <a href="#">link 2</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-    <script>
-        const nome = document.getElementById("nome")
-        const sobrenome = document.getElementById("sobrenome")
-        const numero = document.getElementById("numero")
-        const email = document.getElementById("email")
-        const slideValue = document.querySelector("span.spon")
-        const inputSlider = document.querySelector("input.slide")
-        inputSlider.oninput = (() => {
-            let value = inputSlider.value;
-            slideValue.textContent = value;
-            slideValue.classList.add("show")
-        })
-        inputSlider.onblur = (() => {
-            slideValue.classList.remove("show")
-        })
+    </div>-->
+        <div id="meio">
+            <div id="imgdireita">
+                <img src="img/celmontearte.png" alt="" width="350" height="600">
+            </div>
 
-        function checar() {
-            if (nome.value == '' || sobrenome.value == '' || numero.value == '') {
+            <h1> Apresentação</h1>
+            <p>
+                Olá, Meu nome é Ana Beatriz Monteiro, sou gerenciadora do instagram @montearte_ e nele eu junto com vocês monto a nossa arte!
+            </p>
+            <h1>Como me inspiro?</h1>
+            <ul>
+                <li>uso o pinterest</li>
+                <li>sigo pessoas que gostam de </br> bordar no instagram</li>
+                <li>sempre busco criar coisas que me trazem alegria</li>
+            </ul>
+            <h1>Como surgiu o nome @montearte_</h1>
+            <p>Foi uma associação ao meu nome e ao que quero trazer para vocês. Meu nome se chama Monteiro e sempre nas redes sociais eu usava apenas "monte", e juntando com a ideia de montar a peças com as pessoas de acordo como elas queriam, então resolvi
+                unir o util ao agradavel e no fim acaba sendo um trocadilho rsrs</p>
+            <a href="https://instagram.com/montearte_?igshid=1d2fs4xg0s37i">
+                <p>Para acessar meu insta é só clicar aqui</p>
+            </a>
 
-            } else {
-                document.querySelector('.control').classList.remove('disabled')
-                document.getElementById('btn').removeAttribute('disabled')
-            }
-        }
-    </script>
+        </div>
+
+
 </body>
 
 </html>
